@@ -1,0 +1,12 @@
+<!--pages/movie/movie.wxml-->
+<text>pages/movie/movie.wxml</text>
+<view wx:for="{{movielist}}" wx:key="{{index}}">
+<image src="{{item.images.small}}"></image>
+<view>{{item.title}}</view>
+<view>观众评分： {{item.rating.average}}分</view>
+<view >主演：
+<text wx:for="{{item.casts}}" wx:key="{{index}}">{{item.name}}</text>
+</view>
+<view>年份：{{item.year}}</view>
+<van-button type="primary" bindtap="gotoConment" data-movieid="{{item.id}}">评价</van-button>
+</view>

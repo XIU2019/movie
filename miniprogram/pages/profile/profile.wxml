@@ -1,0 +1,7 @@
+<!--pages/profile/profile.wxml-->
+<text>pages/profile/profile.wxml</text>
+//第一种方法
+<open-data type="userAvatarUrl"></open-data>
+<open-data type="userNickName"></open-data>
+//第二种方法
+<button open-type='getUserInfo' bindgetuserinfo='onGotUserInfo'>获取用户信息</button>

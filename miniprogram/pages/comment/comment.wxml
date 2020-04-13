@@ -1,0 +1,24 @@
+<!--pages/comment/comment.wxml-->
+<text>pages/comment/comment.wxml</text>
+<view class="">
+<view class="detail-container"
+style="background:url({{detail.images.large}}) no-repeattop/cover"></view>
+<view class="detail-mask"></view>
+<view class="detail-info">
+<image src="{{detail.images.large}}"></image></view>
+<view>{{detail.title}}</view>
+<view>{{detail.original.title}}</view>
+</view>
+<van-cell-group>
+  <van-field
+    value="{{ content }}"
+    placeholder="请写一些评价吧"
+    bind:change="onContentChange"
+  />
+</van-cell-group>
+<van-rate value="{{ score }}" bind:change="onScoreChange" />
+<van-button type="warning"bindtap="uploadImg">上传图片</van-button>
+<view>
+<image src="{{item}}" wx:for="{{images}}" wx:key="{{index}}"></image>
+</view>
+<van-button type="danger" size="large" bindtap="submit">提交评价</van-button>
